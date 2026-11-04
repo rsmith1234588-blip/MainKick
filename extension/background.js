@@ -352,7 +352,7 @@ async function runOnSelection(mode, text, tab) {
   const shown = tab?.id >= 0 && (await showPanel(tab.id));
   if (!shown) {
     // Can't draw on this page: the answer still lands in the chat, so point the user at the toolbar popup.
-    chrome.action.setBadgeBackgroundColor({ color: '#00c853' });
+    chrome.action.setBadgeBackgroundColor({ color: '#34e873' });
     chrome.action.setBadgeText({ text: '1' });
     chrome.action.openPopup?.().catch(() => {});
   }
