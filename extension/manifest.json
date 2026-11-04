@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "Mainkick",
+  "version": "1.0.0",
+  "description": "Your main kick for the web: AI chat, summaries, translations, image search, memory and a built-in editor.",
+  "minimum_chrome_version": "116",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "contextMenus",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://api.groq.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Mainkick (Alt+M)",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": { "default": "Alt+M" },
+      "description": "Open Mainkick"
+    },
+    "summarize-selection": {
+      "suggested_key": { "default": "Alt+S" },
+      "description": "Summarize the highlighted text"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
